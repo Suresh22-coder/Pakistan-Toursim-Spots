@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Travel Explorer | Discover Pakistan's Beauty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-mountain-sun"></i>
+                <span>Pakistan Travel Explorer</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#destinations"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
+                <li><a href="#culture"><i class="fas fa-utensils"></i> Culture</a></li>
+                <li><a href="#tips"><i class="fas fa-lightbulb"></i> Travel Tips</a></li>
+                <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="#map"><i class="fas fa-map"></i> Interactive Map</a></li>
+                <li><a href="#contact" class="btn-contact">Share Your Story</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover the <span class="highlight">Hidden Treasures</span> of Pakistan</h1>
+            <p>From the majestic peaks of the Himalayas to the vibrant bazaars of Lahore, explore the beauty and culture of Pakistan.</p>
+            <a href="#destinations" class="btn-hero">Start Exploring <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="section" id="destinations">
+        <div class="container">
+            <h2 class="section-title">Destination Highlights</h2>
+            <p class="section-subtitle">Explore Pakistan's most breathtaking tourist spots</p>
+            
+            <div class="destinations-grid">
+                <!-- Destination 1 -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Hunza Valley">
+                        <div class="destination-label">Northern Areas</div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Hunza Valley</h3>
+                        <p>Known as "Heaven on Earth," Hunza Valley offers stunning views of Rakaposhi and Ultar Sar peaks, along with friendly locals and delicious apricots.</p>
+                        <div class="destination-features">
+                            <span><i class="fas fa-mountain"></i> Mountain Views</span>
+                            <span><i class="fas fa-history"></i> Ancient Forts</span>
+                            <span><i class="fas fa-hiking"></i> Trekking</span>
+                        </div>
+                        <a href="#" class="btn-destination">Explore More</a>
+                    </div>
+                </div>
+                
+                <!-- Destination 2 -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="https://images.unsplash.com/photo-1585506936724-fa0c19c7b3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Lahore Fort">
+                        <div class="destination-label">Punjab</div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Lahore - The Heart of Pakistan</h3>
+                        <p>Explore the rich Mughal heritage at Lahore Fort and Badshahi Mosque, and enjoy the vibrant food scene of Pakistan's cultural capital.</p>
+                        <div class="destination-features">
+                            <span><i class="fas fa-monument"></i> Historical Sites</span>
+                            <span><i class="fas fa-utensils"></i> Food Paradise</span>
+                            <span><i class="fas fa-shopping-bag"></i> Shopping</span>
+                        </div>
+                        <a href="#" class="btn-destination">Explore More</a>
+                    </div>
+                </div>
+                
+                <!-- Destination 3 -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="https://images.unsplash.com/photo-1578662990686-2c6e8debb524?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Makkran Coastal Highway">
+                        <div class="destination-label">Balochistan</div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Makkran Coastal Highway</h3>
+                        <p>Experience the stunning coastal views along the Makkran Coastal Highway, with pristine beaches and unique rock formations.</p>
+                        <div class="destination-features">
+                            <span><i class="fas fa-umbrella-beach"></i> Beaches</span>
+                            <span><i class="fas fa-water"></i> Coastal Views</span>
+                            <span><i class="fas fa-fish"></i> Seafood</span>
+                        </div>
+                        <a href="#" class="btn-destination">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Insights Section -->
+    <section class="section culture-section" id="culture">
+        <div class="container">
+            <h2 class="section-title">Cultural Insights</h2>
+            <p class="section-subtitle">Discover Pakistan's rich traditions, festivals, and cuisine</p>
+            
+            <div class="culture-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="festivals">Festivals</button>
+                    <button class="tab-button" data-tab="traditions">Traditions</button>
+                    <button class="tab-button" data-tab="foods">Must-Try Foods</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="festivals">
+                        <div class="culture-item">
+                            <div class="culture-img">
+                                <img src="https://images.unsplash.com/photo-1611574474033-57df2274fdfa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Basant Festival">
+                            </div>
+                            <div class="culture-text">
+                                <h3>Basant Festival - Celebration of Spring</h3>
+                                <p>Basant is a spring festival celebrated primarily in Punjab, marked by kite flying, yellow clothing, and traditional food. Lahore comes alive with colorful kites filling the sky.</p>
+                                <ul>
+                                    <li><strong>When:</strong> February-March</li>
+                                    <li><strong>Where:</strong> Primarily in Punjab, especially Lahore</li>
+                                    <li><strong>Highlights:</strong> Kite flying competitions, traditional music, yellow-themed clothing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="traditions">
+                        <div class="culture-item">
+                            <div class="culture-img">
+                                <img src="https://images.unsplash.com/photo-1547825407-12d434919a73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Traditional Clothing">
+                            </div>
+                            <div class="culture-text">
+                                <h3>Traditional Clothing & Craftsmanship</h3>
+                                <p>Pakistan boasts a rich tradition of textiles and craftsmanship, from intricate embroidery to handwoven fabrics.</p>
+                                <ul>
+                                    <li><strong>Shalwar Kameez:</strong> The national dress worn by both men and women</li>
+                                    <li><strong>Phulkari Embroidery:</strong> Vibrant floral embroidery from Punjab</li>
+                                    <li><strong>Ajrak:</strong> Block-printed shawls from Sindh with symbolic patterns</li>
+                                    <li><strong>Peshawari Chappal:</strong> Handcrafted leather sandals from Khyber Pakhtunkhwa</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="foods">
+                        <div class="culture-item">
+                            <div class="culture-img">
+                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Pakistani Food">
+                            </div>
+                            <div class="culture-text">
+                                <h3>Pakistani Cuisine - A Flavorful Journey</h3>
+                                <p>Pakistani food is a delicious blend of aromatic spices, herbs, and diverse cooking techniques influenced by Central Asian, South Asian, and Middle Eastern cuisines.</p>
+                                <ul>
+                                    <li><strong>Biryani:</strong> Fragrant rice dish with meat, spices, and saffron</li>
+                                    <li><strong>Nihari:</strong> Slow-cooked meat stew, traditionally eaten for breakfast</li>
+                                    <li><strong>Chaap & Seekh Kebabs:</strong> Grilled meat delicacies</li>
+                                    <li><strong>Halwa Puri:</strong> Traditional breakfast of fried bread with semolina dessert</li>
+                                    <li><strong>Chai (Tea):</strong> The national drink, often enjoyed with biscuits or snacks</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section class="section tips-section" id="tips">
+        <div class="container">
+            <h2 class="section-title">Travel Tips</h2>
+            <p class="section-subtitle">Essential advice for traveling in Pakistan</p>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Transportation</h3>
+                    <ul>
+                        <li>Use ride-hailing apps like Careem and Uber in major cities</li>
+                        <li>For intercity travel, consider Daewoo or Skyways buses</li>
+                        <li>Domestic flights connect major cities and are time-efficient</li>
+                        <li>Trains offer scenic routes but can be slower</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3>Accommodations</h3>
+                    <ul>
+                        <li>Major hotels available in all large cities</li>
+                        <li>Guesthouses and motels are budget-friendly options</li>
+                        <li>PTDC motels offer good value in tourist areas</li>
+                        <li>Homestays available in northern areas for authentic experience</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety & Etiquette</h3>
+                    <ul>
+                        <li>Pakistan is generally safe, but check travel advisories</li>
+                        <li>Dress modestly, especially in conservative areas</li>
+                        <li>Always ask permission before photographing people</li>
+                        <li>Carry cash as credit cards aren't accepted everywhere</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Gallery Section -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">User Gallery</h2>
+            <p class="section-subtitle">Share your Pakistani travel experiences with our community</p>
+            
+            <div class="gallery-grid">
+                <!-- Gallery images will be populated by JavaScript -->
+            </div>
+            
+            <div class="upload-form-container">
+                <h3>Share Your Travel Story</h3>
+                <form id="uploadForm" class="upload-form">
+                    <div class="form-group">
+                        <input type="text" id="userName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="location" placeholder="Location in Pakistan" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="story" placeholder="Share your experience..." rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUpload">Upload Photo (URL)</label>
+                        <input type="text" id="imageUpload" placeholder="Paste image URL" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Your Story</button>
+                </form>
+                <div class="form-notice">
+                    <p><i class="fas fa-info-circle"></i> Note: This is a demo form. In a real application, you would upload images to a server.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="section map-section" id="map">
+        <div class="container">
+            <h2 class="section-title">Interactive Map</h2>
+            <p class="section-subtitle">Explore popular tourist spots across Pakistan</p>
+            
+            <div class="map-container">
+                <div id="pakistanMap"></div>
+                <div class="map-legend">
+                    <h4><i class="fas fa-map-pin"></i> Legend</h4>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #e74c3c;"></span>
+                        <span>Historical Sites</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #2ecc71;"></span>
+                        <span>Natural Wonders</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #3498db;"></span>
+                        <span>Cities & Urban Areas</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #f39c12;"></span>
+                        <span>Cultural Sites</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-mountain-sun"></i>
+                    <h3>Pakistan Travel Explorer</h3>
+                    <p>Discover the beauty, culture, and adventure that Pakistan has to offer.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#culture">Culture</a></li>
+                        <li><a href="#tips">Travel Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@pakistantravelexplorer.com</p>
+                    <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Pakistan Travel Explorer. All rights reserved.</p>
+                <p>This website is a demonstration project for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
